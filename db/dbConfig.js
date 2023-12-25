@@ -6,10 +6,15 @@ const dbconection =mysql2.createPool({
     password:"7A8mOVrUNBmz.GUQ",
     connectionLimit:10
 })
-dbconection.execute("select 'test'", (err, result)=>{
-    if (err){
-        console.log(err.message)
-    }else {
-        console.log(result)
-    }
-})
+
+
+
+// dbconection.execute("select 'test'", (err, result)=>{
+//     if (err){
+//         console.log(err.message)
+//     }else {
+//         console.log(result)
+//     }
+// })
+
+module.exports =dbconection.promise
